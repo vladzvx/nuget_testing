@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  service:
+    ports: 
+        - 5000:80
+    image: NuGetTestingService
+    container_name: NuGetTestingService
+    build:
+      context: .
+      dockerfile: Service/Dockerfile
