@@ -18,4 +18,4 @@ jobs:
           # Filepath of the project to be packaged, relative to root of repository
           PROJECT_FILE_PATH: Lib/Lib.csproj
           NUGET_KEY: NUGET-SERVER-API-KEY
-          NUGET_SOURCE: https://cthulhu-online.fun:5000/v2/index.json
+          NUGET_SOURCE: https://cthulhu-online.fun:5000
