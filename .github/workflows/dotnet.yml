@@ -1,0 +1,21 @@
+name: .NET
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  publish:
+    name: build, pack & publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: publish on version change
+        id: publish_nuget
+        uses: brandedoutcast/publish-nuget@v2
+        with:
+          # Filepath of the project to be packaged, relative to root of repository
+          PROJECT_FILE_PATH: Lib/Lib.csproj
+          NUGET_KEY: NUGET-SERVER-API-KEY
+          NUGET_SOURCE: http://45.151.144.28:5555/v3/index.json
